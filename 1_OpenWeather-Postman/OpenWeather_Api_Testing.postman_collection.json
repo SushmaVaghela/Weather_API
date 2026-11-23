@@ -1,0 +1,70 @@
+{
+  "info": {
+    "_postman_id": "6a5500b2-09bd-4e13-86b8-a5f712570150",
+    "name": "OpenWeather_Api_Testing",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "55585098",
+    "_collection_link": "https://go.postman.co/collection/55585098-6a5500b2-09bd-4e13-86b8-a5f712570150?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "GET Request",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "GET Request",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          "pm.test(\"Status Code is 200\", function () {\r",
+          "    pm.response.to.have.status(200);\r",
+          "});\r",
+          "\r",
+          "pm.test(\"Response Time Less Than 700ms\", function () {\r",
+          "    pm.expect(pm.response.responseTime).to.be.below(700);\r",
+          "});"
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseURL",
+      "value": ""
+    },
+    {
+      "key": "appid",
+      "value": ""
+    },
+    {
+      "value": ""
+    }
+  ]
+}
